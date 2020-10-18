@@ -67,10 +67,8 @@ class Calculator(QMainWindow, Ui_Calculator):
 		self.btn_dot.clicked.connect(self.dot)
 
 		# CURRENCY PAGE
-
 		self.btn_to_currency.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.currency_page))
 		self.btn_to_currency.clicked.connect(self.take_rates)
-		self.btn_currency_result.clicked.connect(lambda: print('нажили на кнопку'))
 		self.btn_currency_result.clicked.connect(self.currency_result)
 
 		# BUTTONS WITH CURRENCY
@@ -199,8 +197,6 @@ class Calculator(QMainWindow, Ui_Calculator):
 				self.display_2.setText(f'{self.x}-{self.y}')
 			elif self.sign == 'btn_multiplication':
 				self.display.setText(f'{f.multiplication(self.x, self.y)}')
-				# print(self.x, '----', self.y)
-				# print(f.multiplication(self.x, self.y))
 				self.display_2.setText(f'{self.x}*{self.y}')
 			elif self.sign == 'btn_division':
 				self.display.setText(f'{f.division(self.x, self.y)}')
