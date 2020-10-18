@@ -14,48 +14,1660 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Calculator(object):
     def setupUi(self, Calculator):
         Calculator.setObjectName("Calculator")
-        Calculator.resize(307, 240)
+        Calculator.resize(312, 482)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(Calculator.sizePolicy().hasHeightForWidth())
+        Calculator.setSizePolicy(sizePolicy)
+        Calculator.setMinimumSize(QtCore.QSize(0, 482))
+        Calculator.setMaximumSize(QtCore.QSize(600, 482))
         self.centralwidget = QtWidgets.QWidget(Calculator)
+        self.centralwidget.setStyleSheet("background-color: rgb(215, 215, 215);")
         self.centralwidget.setObjectName("centralwidget")
-        self.result = QtWidgets.QPushButton(self.centralwidget)
-        self.result.setGeometry(QtCore.QRect(20, 0, 271, 51))
-        self.result.setText("")
-        self.result.setDefault(False)
-        self.result.setFlat(False)
-        self.result.setObjectName("result")
-        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 60, 289, 101))
-        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.display = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_3.setContentsMargins(1, 1, 1, 1)
+        self.verticalLayout_3.setSpacing(1)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.frame.setStyleSheet("")
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.frame.setLineWidth(0)
+        self.frame.setObjectName("frame")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.frame)
+        self.gridLayout_3.setContentsMargins(1, 1, 1, 1)
+        self.gridLayout_3.setHorizontalSpacing(10)
+        self.gridLayout_3.setVerticalSpacing(1)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.btn_to_calculator = QtWidgets.QPushButton(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_to_calculator.sizePolicy().hasHeightForWidth())
+        self.btn_to_calculator.setSizePolicy(sizePolicy)
+        self.btn_to_calculator.setAutoFillBackground(False)
+        self.btn_to_calculator.setStyleSheet("QPushButton {\n"
+"    border: 1px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_to_calculator.setCheckable(False)
+        self.btn_to_calculator.setObjectName("btn_to_calculator")
+        self.gridLayout_3.addWidget(self.btn_to_calculator, 0, 0, 1, 1)
+        self.btn_to_currency = QtWidgets.QPushButton(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_to_currency.sizePolicy().hasHeightForWidth())
+        self.btn_to_currency.setSizePolicy(sizePolicy)
+        self.btn_to_currency.setAutoFillBackground(False)
+        self.btn_to_currency.setStyleSheet("QPushButton {\n"
+"    border: 1px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_to_currency.setCheckable(False)
+        self.btn_to_currency.setObjectName("btn_to_currency")
+        self.gridLayout_3.addWidget(self.btn_to_currency, 0, 1, 1, 1)
+        self.verticalLayout_3.addWidget(self.frame)
+        self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
+        self.stackedWidget.setMinimumSize(QtCore.QSize(310, 65))
+        self.stackedWidget.setMaximumSize(QtCore.QSize(16777215, 400))
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.calculator_page = QtWidgets.QWidget()
+        self.calculator_page.setObjectName("calculator_page")
+        self._2 = QtWidgets.QVBoxLayout(self.calculator_page)
+        self._2.setContentsMargins(1, 1, 1, 1)
+        self._2.setSpacing(1)
+        self._2.setObjectName("_2")
+        self.frame_3 = QtWidgets.QFrame(self.calculator_page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame_3.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.vboxlayout = QtWidgets.QVBoxLayout(self.frame_3)
+        self.vboxlayout.setContentsMargins(1, 1, 1, 1)
+        self.vboxlayout.setSpacing(1)
+        self.vboxlayout.setObjectName("vboxlayout")
+        self.display = QtWidgets.QLineEdit(self.frame_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.display.sizePolicy().hasHeightForWidth())
+        self.display.setSizePolicy(sizePolicy)
+        self.display.setMinimumSize(QtCore.QSize(300, 50))
+        font = QtGui.QFont()
+        font.setFamily("Futura")
+        font.setPointSize(30)
+        self.display.setFont(font)
+        self.display.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.display.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display.setAutoFillBackground(False)
+        self.display.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.display.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display.setFrame(False)
+        self.display.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.display.setObjectName("display")
-        self.verticalLayout.addWidget(self.display)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.plus = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.plus.setFocusPolicy(QtCore.Qt.TabFocus)
-        self.plus.setAutoFillBackground(False)
-        self.plus.setFlat(False)
-        self.plus.setObjectName("plus")
-        self.horizontalLayout.addWidget(self.plus)
-        self.minus = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.minus.setObjectName("minus")
-        self.horizontalLayout.addWidget(self.minus)
-        self.mult = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.mult.setObjectName("mult")
-        self.horizontalLayout.addWidget(self.mult)
-        self.divis = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.divis.setObjectName("divis")
-        self.horizontalLayout.addWidget(self.divis)
-        self.enter = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.enter.setObjectName("enter")
-        self.horizontalLayout.addWidget(self.enter)
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.vboxlayout.addWidget(self.display)
+        self.display_2 = QtWidgets.QLineEdit(self.frame_3)
+        self.display_2.setMinimumSize(QtCore.QSize(300, 30))
+        font = QtGui.QFont()
+        font.setFamily("Futura")
+        font.setPointSize(20)
+        font.setUnderline(False)
+        font.setStrikeOut(False)
+        font.setKerning(True)
+        self.display_2.setFont(font)
+        self.display_2.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.display_2.setTabletTracking(False)
+        self.display_2.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.display_2.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display_2.setAutoFillBackground(False)
+        self.display_2.setStyleSheet("background-color: rgb(237, 240, 240);\n"
+"color: rgb(100, 100, 100);")
+        self.display_2.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display_2.setText("")
+        self.display_2.setFrame(False)
+        self.display_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.display_2.setPlaceholderText("")
+        self.display_2.setClearButtonEnabled(False)
+        self.display_2.setObjectName("display_2")
+        self.vboxlayout.addWidget(self.display_2)
+        self._2.addWidget(self.frame_3)
+        self.frame_2 = QtWidgets.QFrame(self.calculator_page)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.frame_2.setLineWidth(0)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout.setContentsMargins(1, 1, 1, 1)
+        self.gridLayout.setSpacing(1)
+        self.gridLayout.setObjectName("gridLayout")
+        self.btn_addition = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_addition.sizePolicy().hasHeightForWidth())
+        self.btn_addition.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_addition.setFont(font)
+        self.btn_addition.setFocusPolicy(QtCore.Qt.TabFocus)
+        self.btn_addition.setAutoFillBackground(False)
+        self.btn_addition.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_addition.setFlat(False)
+        self.btn_addition.setObjectName("btn_addition")
+        self.gridLayout.addWidget(self.btn_addition, 0, 4, 1, 1)
+        self.btn_subtraction = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_subtraction.sizePolicy().hasHeightForWidth())
+        self.btn_subtraction.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_subtraction.setFont(font)
+        self.btn_subtraction.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_subtraction.setObjectName("btn_subtraction")
+        self.gridLayout.addWidget(self.btn_subtraction, 1, 4, 1, 1)
+        self.btn_division = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_division.sizePolicy().hasHeightForWidth())
+        self.btn_division.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_division.setFont(font)
+        self.btn_division.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_division.setObjectName("btn_division")
+        self.gridLayout.addWidget(self.btn_division, 3, 4, 1, 1)
+        self.btn_3 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_3.sizePolicy().hasHeightForWidth())
+        self.btn_3.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_3.setFont(font)
+        self.btn_3.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_3.setObjectName("btn_3")
+        self.gridLayout.addWidget(self.btn_3, 3, 3, 1, 1)
+        self.btn_dot = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_dot.sizePolicy().hasHeightForWidth())
+        self.btn_dot.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_dot.setFont(font)
+        self.btn_dot.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_dot.setObjectName("btn_dot")
+        self.gridLayout.addWidget(self.btn_dot, 4, 1, 1, 1)
+        self.btn_mem_reset = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_mem_reset.sizePolicy().hasHeightForWidth())
+        self.btn_mem_reset.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_mem_reset.setFont(font)
+        self.btn_mem_reset.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_mem_reset.setObjectName("btn_mem_reset")
+        self.gridLayout.addWidget(self.btn_mem_reset, 0, 0, 1, 1)
+        self.btn_factorial = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_factorial.sizePolicy().hasHeightForWidth())
+        self.btn_factorial.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_factorial.setFont(font)
+        self.btn_factorial.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_factorial.setObjectName("btn_factorial")
+        self.gridLayout.addWidget(self.btn_factorial, 3, 0, 1, 1)
+        self.btn_9 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_9.sizePolicy().hasHeightForWidth())
+        self.btn_9.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_9.setFont(font)
+        self.btn_9.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_9.setObjectName("btn_9")
+        self.gridLayout.addWidget(self.btn_9, 1, 3, 1, 1)
+        self.btn_minus = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_minus.sizePolicy().hasHeightForWidth())
+        self.btn_minus.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_minus.setFont(font)
+        self.btn_minus.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_minus.setObjectName("btn_minus")
+        self.gridLayout.addWidget(self.btn_minus, 4, 0, 1, 1)
+        self.btn_4 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_4.sizePolicy().hasHeightForWidth())
+        self.btn_4.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_4.setFont(font)
+        self.btn_4.setToolTip("")
+        self.btn_4.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_4.setObjectName("btn_4")
+        self.gridLayout.addWidget(self.btn_4, 2, 1, 1, 1)
+        self.btn_mem_minus = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_mem_minus.sizePolicy().hasHeightForWidth())
+        self.btn_mem_minus.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_mem_minus.setFont(font)
+        self.btn_mem_minus.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_mem_minus.setObjectName("btn_mem_minus")
+        self.gridLayout.addWidget(self.btn_mem_minus, 0, 2, 1, 1)
+        self.btn_6 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_6.sizePolicy().hasHeightForWidth())
+        self.btn_6.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_6.setFont(font)
+        self.btn_6.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_6.setObjectName("btn_6")
+        self.gridLayout.addWidget(self.btn_6, 2, 3, 1, 1)
+        self.btn_2 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_2.sizePolicy().hasHeightForWidth())
+        self.btn_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_2.setFont(font)
+        self.btn_2.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_2.setObjectName("btn_2")
+        self.gridLayout.addWidget(self.btn_2, 3, 2, 1, 1)
+        self.btn_1 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_1.sizePolicy().hasHeightForWidth())
+        self.btn_1.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_1.setFont(font)
+        self.btn_1.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_1.setObjectName("btn_1")
+        self.gridLayout.addWidget(self.btn_1, 3, 1, 1, 1)
+        self.btn_power = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_power.sizePolicy().hasHeightForWidth())
+        self.btn_power.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_power.setFont(font)
+        self.btn_power.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_power.setObjectName("btn_power")
+        self.gridLayout.addWidget(self.btn_power, 1, 0, 1, 1)
+        self.btn_8 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_8.sizePolicy().hasHeightForWidth())
+        self.btn_8.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_8.setFont(font)
+        self.btn_8.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_8.setObjectName("btn_8")
+        self.gridLayout.addWidget(self.btn_8, 1, 2, 1, 1)
+        self.btn_5 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_5.sizePolicy().hasHeightForWidth())
+        self.btn_5.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_5.setFont(font)
+        self.btn_5.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_5.setObjectName("btn_5")
+        self.gridLayout.addWidget(self.btn_5, 2, 2, 1, 1)
+        self.btn_mem_plus = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_mem_plus.sizePolicy().hasHeightForWidth())
+        self.btn_mem_plus.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_mem_plus.setFont(font)
+        self.btn_mem_plus.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_mem_plus.setObjectName("btn_mem_plus")
+        self.gridLayout.addWidget(self.btn_mem_plus, 0, 1, 1, 1)
+        self.btn_root = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_root.sizePolicy().hasHeightForWidth())
+        self.btn_root.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_root.setFont(font)
+        self.btn_root.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_root.setObjectName("btn_root")
+        self.gridLayout.addWidget(self.btn_root, 2, 0, 1, 1)
+        self.btn_multiplication = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_multiplication.sizePolicy().hasHeightForWidth())
+        self.btn_multiplication.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_multiplication.setFont(font)
+        self.btn_multiplication.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_multiplication.setObjectName("btn_multiplication")
+        self.gridLayout.addWidget(self.btn_multiplication, 2, 4, 1, 1)
+        self.btn_mem_show = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_mem_show.sizePolicy().hasHeightForWidth())
+        self.btn_mem_show.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_mem_show.setFont(font)
+        self.btn_mem_show.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(145, 145, 145);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_mem_show.setObjectName("btn_mem_show")
+        self.gridLayout.addWidget(self.btn_mem_show, 0, 3, 1, 1)
+        self.btn_7 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_7.sizePolicy().hasHeightForWidth())
+        self.btn_7.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_7.setFont(font)
+        self.btn_7.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_7.setObjectName("btn_7")
+        self.gridLayout.addWidget(self.btn_7, 1, 1, 1, 1)
+        self.btn_0 = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_0.sizePolicy().hasHeightForWidth())
+        self.btn_0.setSizePolicy(sizePolicy)
+        self.btn_0.setSizeIncrement(QtCore.QSize(60, 40))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_0.setFont(font)
+        self.btn_0.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_0.setObjectName("btn_0")
+        self.gridLayout.addWidget(self.btn_0, 4, 2, 1, 1)
+        self.btn_AC = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_AC.sizePolicy().hasHeightForWidth())
+        self.btn_AC.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_AC.setFont(font)
+        self.btn_AC.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self.btn_AC.setObjectName("btn_AC")
+        self.gridLayout.addWidget(self.btn_AC, 4, 3, 1, 1)
+        self.btn_result = QtWidgets.QPushButton(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_result.sizePolicy().hasHeightForWidth())
+        self.btn_result.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_result.setFont(font)
+        self.btn_result.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_result.setObjectName("btn_result")
+        self.gridLayout.addWidget(self.btn_result, 4, 4, 1, 1)
+        self._2.addWidget(self.frame_2)
+        self.stackedWidget.addWidget(self.calculator_page)
+        self.currency_page = QtWidgets.QWidget()
+        self.currency_page.setObjectName("currency_page")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.currency_page)
+        self.verticalLayout.setContentsMargins(1, 1, 1, 1)
+        self.verticalLayout.setSpacing(1)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame_4 = QtWidgets.QFrame(self.currency_page)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_4)
+        self.gridLayout_2.setContentsMargins(1, 0, 0, 0)
+        self.gridLayout_2.setHorizontalSpacing(1)
+        self.gridLayout_2.setVerticalSpacing(2)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.display_RUB = QtWidgets.QLineEdit(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.display_RUB.sizePolicy().hasHeightForWidth())
+        self.display_RUB.setSizePolicy(sizePolicy)
+        self.display_RUB.setMinimumSize(QtCore.QSize(0, 65))
+        font = QtGui.QFont()
+        font.setFamily("Futura")
+        font.setPointSize(30)
+        self.display_RUB.setFont(font)
+        self.display_RUB.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.display_RUB.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display_RUB.setAutoFillBackground(False)
+        self.display_RUB.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.display_RUB.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display_RUB.setMaxLength(16)
+        self.display_RUB.setFrame(False)
+        self.display_RUB.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.display_RUB.setClearButtonEnabled(False)
+        self.display_RUB.setObjectName("display_RUB")
+        self.gridLayout_2.addWidget(self.display_RUB, 1, 1, 1, 1)
+        self.btn_currency_result = QtWidgets.QPushButton(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_currency_result.sizePolicy().hasHeightForWidth())
+        self.btn_currency_result.setSizePolicy(sizePolicy)
+        self.btn_currency_result.setMaximumSize(QtCore.QSize(0, 0))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_currency_result.setFont(font)
+        self.btn_currency_result.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    background-color: rgb(235, 140, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}\n"
+"")
+        self.btn_currency_result.setObjectName("btn_currency_result")
+        self.gridLayout_2.addWidget(self.btn_currency_result, 3, 0, 1, 2)
+        self.display_currency = QtWidgets.QLineEdit(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.display_currency.sizePolicy().hasHeightForWidth())
+        self.display_currency.setSizePolicy(sizePolicy)
+        self.display_currency.setMinimumSize(QtCore.QSize(0, 65))
+        font = QtGui.QFont()
+        font.setFamily("Futura")
+        font.setPointSize(30)
+        self.display_currency.setFont(font)
+        self.display_currency.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.display_currency.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display_currency.setAutoFillBackground(False)
+        self.display_currency.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.display_currency.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display_currency.setMaxLength(16)
+        self.display_currency.setFrame(False)
+        self.display_currency.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.display_currency.setClearButtonEnabled(False)
+        self.display_currency.setObjectName("display_currency")
+        self.gridLayout_2.addWidget(self.display_currency, 1, 0, 1, 1)
+        self.display_currency_name = QtWidgets.QLineEdit(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.display_currency_name.sizePolicy().hasHeightForWidth())
+        self.display_currency_name.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(20)
+        font.setUnderline(False)
+        font.setStrikeOut(False)
+        font.setKerning(True)
+        self.display_currency_name.setFont(font)
+        self.display_currency_name.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.display_currency_name.setTabletTracking(False)
+        self.display_currency_name.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.display_currency_name.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display_currency_name.setAutoFillBackground(False)
+        self.display_currency_name.setStyleSheet("background-color: rgb(237, 240, 240);\n"
+"color: rgb(100, 100, 100);")
+        self.display_currency_name.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display_currency_name.setFrame(False)
+        self.display_currency_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.display_currency_name.setPlaceholderText("")
+        self.display_currency_name.setClearButtonEnabled(False)
+        self.display_currency_name.setObjectName("display_currency_name")
+        self.gridLayout_2.addWidget(self.display_currency_name, 2, 0, 1, 1)
+        self.display_RUB_name = QtWidgets.QLineEdit(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.display_RUB_name.sizePolicy().hasHeightForWidth())
+        self.display_RUB_name.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(20)
+        font.setUnderline(False)
+        font.setStrikeOut(False)
+        font.setKerning(True)
+        self.display_RUB_name.setFont(font)
+        self.display_RUB_name.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.display_RUB_name.setTabletTracking(False)
+        self.display_RUB_name.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.display_RUB_name.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.display_RUB_name.setAutoFillBackground(False)
+        self.display_RUB_name.setStyleSheet("background-color: rgb(237, 240, 240);\n"
+"color: rgb(100, 100, 100);")
+        self.display_RUB_name.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.display_RUB_name.setFrame(False)
+        self.display_RUB_name.setAlignment(QtCore.Qt.AlignCenter)
+        self.display_RUB_name.setPlaceholderText("")
+        self.display_RUB_name.setClearButtonEnabled(False)
+        self.display_RUB_name.setObjectName("display_RUB_name")
+        self.gridLayout_2.addWidget(self.display_RUB_name, 2, 1, 1, 1)
+        self.verticalLayout.addWidget(self.frame_4)
+        self.scrollArea = QtWidgets.QScrollArea(self.currency_page)
+        self.scrollArea.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.scrollArea.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.scrollArea.setLineWidth(0)
+        self.scrollArea.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -587, 308, 891))
+        self.scrollAreaWidgetContents.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_2.setContentsMargins(1, 1, 1, 1)
+        self.verticalLayout_2.setSpacing(2)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self._036 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._036.sizePolicy().hasHeightForWidth())
+        self._036.setSizePolicy(sizePolicy)
+        self._036.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._036.setFont(font)
+        self._036.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._036.setObjectName("_036")
+        self.verticalLayout_2.addWidget(self._036)
+        self._944 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._944.sizePolicy().hasHeightForWidth())
+        self._944.setSizePolicy(sizePolicy)
+        self._944.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._944.setFont(font)
+        self._944.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._944.setObjectName("_944")
+        self.verticalLayout_2.addWidget(self._944)
+        self._826 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._826.sizePolicy().hasHeightForWidth())
+        self._826.setSizePolicy(sizePolicy)
+        self._826.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._826.setFont(font)
+        self._826.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._826.setObjectName("_826")
+        self.verticalLayout_2.addWidget(self._826)
+        self._051 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._051.sizePolicy().hasHeightForWidth())
+        self._051.setSizePolicy(sizePolicy)
+        self._051.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._051.setFont(font)
+        self._051.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._051.setObjectName("_051")
+        self.verticalLayout_2.addWidget(self._051)
+        self._933 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._933.sizePolicy().hasHeightForWidth())
+        self._933.setSizePolicy(sizePolicy)
+        self._933.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._933.setFont(font)
+        self._933.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._933.setObjectName("_933")
+        self.verticalLayout_2.addWidget(self._933)
+        self._975 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._975.sizePolicy().hasHeightForWidth())
+        self._975.setSizePolicy(sizePolicy)
+        self._975.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._975.setFont(font)
+        self._975.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._975.setObjectName("_975")
+        self.verticalLayout_2.addWidget(self._975)
+        self._986 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._986.sizePolicy().hasHeightForWidth())
+        self._986.setSizePolicy(sizePolicy)
+        self._986.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._986.setFont(font)
+        self._986.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._986.setObjectName("_986")
+        self.verticalLayout_2.addWidget(self._986)
+        self._348 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._348.sizePolicy().hasHeightForWidth())
+        self._348.setSizePolicy(sizePolicy)
+        self._348.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._348.setFont(font)
+        self._348.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._348.setObjectName("_348")
+        self.verticalLayout_2.addWidget(self._348)
+        self._344 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._344.sizePolicy().hasHeightForWidth())
+        self._344.setSizePolicy(sizePolicy)
+        self._344.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._344.setFont(font)
+        self._344.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._344.setObjectName("_344")
+        self.verticalLayout_2.addWidget(self._344)
+        self._208 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._208.sizePolicy().hasHeightForWidth())
+        self._208.setSizePolicy(sizePolicy)
+        self._208.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._208.setFont(font)
+        self._208.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._208.setObjectName("_208")
+        self.verticalLayout_2.addWidget(self._208)
+        self._840 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._840.sizePolicy().hasHeightForWidth())
+        self._840.setSizePolicy(sizePolicy)
+        self._840.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._840.setFont(font)
+        self._840.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._840.setObjectName("_840")
+        self.verticalLayout_2.addWidget(self._840)
+        self._978 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._978.sizePolicy().hasHeightForWidth())
+        self._978.setSizePolicy(sizePolicy)
+        self._978.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._978.setFont(font)
+        self._978.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._978.setObjectName("_978")
+        self.verticalLayout_2.addWidget(self._978)
+        self._356 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._356.sizePolicy().hasHeightForWidth())
+        self._356.setSizePolicy(sizePolicy)
+        self._356.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._356.setFont(font)
+        self._356.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._356.setObjectName("_356")
+        self.verticalLayout_2.addWidget(self._356)
+        self._398 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._398.sizePolicy().hasHeightForWidth())
+        self._398.setSizePolicy(sizePolicy)
+        self._398.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._398.setFont(font)
+        self._398.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._398.setObjectName("_398")
+        self.verticalLayout_2.addWidget(self._398)
+        self._124 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._124.sizePolicy().hasHeightForWidth())
+        self._124.setSizePolicy(sizePolicy)
+        self._124.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._124.setFont(font)
+        self._124.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._124.setObjectName("_124")
+        self.verticalLayout_2.addWidget(self._124)
+        self._417 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._417.sizePolicy().hasHeightForWidth())
+        self._417.setSizePolicy(sizePolicy)
+        self._417.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._417.setFont(font)
+        self._417.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._417.setObjectName("_417")
+        self.verticalLayout_2.addWidget(self._417)
+        self._156 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._156.sizePolicy().hasHeightForWidth())
+        self._156.setSizePolicy(sizePolicy)
+        self._156.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._156.setFont(font)
+        self._156.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._156.setObjectName("_156")
+        self.verticalLayout_2.addWidget(self._156)
+        self._498 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._498.sizePolicy().hasHeightForWidth())
+        self._498.setSizePolicy(sizePolicy)
+        self._498.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._498.setFont(font)
+        self._498.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._498.setObjectName("_498")
+        self.verticalLayout_2.addWidget(self._498)
+        self._578 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._578.sizePolicy().hasHeightForWidth())
+        self._578.setSizePolicy(sizePolicy)
+        self._578.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._578.setFont(font)
+        self._578.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._578.setObjectName("_578")
+        self.verticalLayout_2.addWidget(self._578)
+        self._985 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._985.sizePolicy().hasHeightForWidth())
+        self._985.setSizePolicy(sizePolicy)
+        self._985.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._985.setFont(font)
+        self._985.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._985.setObjectName("_985")
+        self.verticalLayout_2.addWidget(self._985)
+        self._946 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._946.sizePolicy().hasHeightForWidth())
+        self._946.setSizePolicy(sizePolicy)
+        self._946.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._946.setFont(font)
+        self._946.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._946.setObjectName("_946")
+        self.verticalLayout_2.addWidget(self._946)
+        self._702 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._702.sizePolicy().hasHeightForWidth())
+        self._702.setSizePolicy(sizePolicy)
+        self._702.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._702.setFont(font)
+        self._702.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._702.setObjectName("_702")
+        self.verticalLayout_2.addWidget(self._702)
+        self._972 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._972.sizePolicy().hasHeightForWidth())
+        self._972.setSizePolicy(sizePolicy)
+        self._972.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._972.setFont(font)
+        self._972.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._972.setObjectName("_972")
+        self.verticalLayout_2.addWidget(self._972)
+        self._949 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._949.sizePolicy().hasHeightForWidth())
+        self._949.setSizePolicy(sizePolicy)
+        self._949.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._949.setFont(font)
+        self._949.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._949.setObjectName("_949")
+        self.verticalLayout_2.addWidget(self._949)
+        self._934 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._934.sizePolicy().hasHeightForWidth())
+        self._934.setSizePolicy(sizePolicy)
+        self._934.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._934.setFont(font)
+        self._934.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._934.setObjectName("_934")
+        self.verticalLayout_2.addWidget(self._934)
+        self._860 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._860.sizePolicy().hasHeightForWidth())
+        self._860.setSizePolicy(sizePolicy)
+        self._860.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._860.setFont(font)
+        self._860.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._860.setObjectName("_860")
+        self.verticalLayout_2.addWidget(self._860)
+        self._980 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._980.sizePolicy().hasHeightForWidth())
+        self._980.setSizePolicy(sizePolicy)
+        self._980.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._980.setFont(font)
+        self._980.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._980.setObjectName("_980")
+        self.verticalLayout_2.addWidget(self._980)
+        self._203 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._203.sizePolicy().hasHeightForWidth())
+        self._203.setSizePolicy(sizePolicy)
+        self._203.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._203.setFont(font)
+        self._203.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._203.setObjectName("_203")
+        self.verticalLayout_2.addWidget(self._203)
+        self._752 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._752.sizePolicy().hasHeightForWidth())
+        self._752.setSizePolicy(sizePolicy)
+        self._752.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._752.setFont(font)
+        self._752.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._752.setObjectName("_752")
+        self.verticalLayout_2.addWidget(self._752)
+        self._756 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._756.sizePolicy().hasHeightForWidth())
+        self._756.setSizePolicy(sizePolicy)
+        self._756.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._756.setFont(font)
+        self._756.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self._756.setAutoFillBackground(False)
+        self._756.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._756.setObjectName("_756")
+        self.verticalLayout_2.addWidget(self._756)
+        self._710 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._710.sizePolicy().hasHeightForWidth())
+        self._710.setSizePolicy(sizePolicy)
+        self._710.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._710.setFont(font)
+        self._710.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._710.setObjectName("_710")
+        self.verticalLayout_2.addWidget(self._710)
+        self._410 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._410.sizePolicy().hasHeightForWidth())
+        self._410.setSizePolicy(sizePolicy)
+        self._410.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._410.setFont(font)
+        self._410.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._410.setObjectName("_410")
+        self.verticalLayout_2.addWidget(self._410)
+        self._392 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self._392.sizePolicy().hasHeightForWidth())
+        self._392.setSizePolicy(sizePolicy)
+        self._392.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Copperplate")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self._392.setFont(font)
+        self._392.setStyleSheet("QPushButton {\n"
+"    text-indent: 1.5em;\n"
+"    text-align: left;\n"
+"    border: 0px;\n"
+"    background-color:rgb(170, 170, 170);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(123, 200, 255);\n"
+"}")
+        self._392.setObjectName("_392")
+        self.verticalLayout_2.addWidget(self._392)
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.verticalLayout.addWidget(self.scrollArea)
+        self.stackedWidget.addWidget(self.currency_page)
+        self.verticalLayout_3.addWidget(self.stackedWidget)
         Calculator.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Calculator)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 307, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 312, 22))
         self.menubar.setObjectName("menubar")
         Calculator.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(Calculator)
@@ -63,13 +1675,76 @@ class Ui_Calculator(object):
         Calculator.setStatusBar(self.statusbar)
 
         self.retranslateUi(Calculator)
+        self.stackedWidget.setCurrentIndex(0)
+        self.display_currency.textChanged['QString'].connect(self.btn_currency_result.click)
         QtCore.QMetaObject.connectSlotsByName(Calculator)
 
     def retranslateUi(self, Calculator):
         _translate = QtCore.QCoreApplication.translate
         Calculator.setWindowTitle(_translate("Calculator", "MainWindow"))
-        self.plus.setText(_translate("Calculator", "+"))
-        self.minus.setText(_translate("Calculator", "-"))
-        self.mult.setText(_translate("Calculator", "*"))
-        self.divis.setText(_translate("Calculator", "/"))
-        self.enter.setText(_translate("Calculator", "="))
+        self.btn_to_calculator.setText(_translate("Calculator", "Calculater"))
+        self.btn_to_currency.setText(_translate("Calculator", "Currency"))
+        self.display.setText(_translate("Calculator", "0"))
+        self.btn_addition.setText(_translate("Calculator", "+"))
+        self.btn_subtraction.setText(_translate("Calculator", "-"))
+        self.btn_division.setText(_translate("Calculator", "÷"))
+        self.btn_3.setText(_translate("Calculator", "3"))
+        self.btn_dot.setText(_translate("Calculator", "."))
+        self.btn_mem_reset.setText(_translate("Calculator", "mc"))
+        self.btn_factorial.setText(_translate("Calculator", "x!"))
+        self.btn_9.setText(_translate("Calculator", "9"))
+        self.btn_minus.setText(_translate("Calculator", "+/-"))
+        self.btn_4.setText(_translate("Calculator", "4"))
+        self.btn_mem_minus.setText(_translate("Calculator", "mr-"))
+        self.btn_6.setText(_translate("Calculator", "6"))
+        self.btn_2.setText(_translate("Calculator", "2"))
+        self.btn_1.setText(_translate("Calculator", "1"))
+        self.btn_power.setText(_translate("Calculator", "xˆy"))
+        self.btn_8.setText(_translate("Calculator", "8"))
+        self.btn_5.setText(_translate("Calculator", "5"))
+        self.btn_mem_plus.setText(_translate("Calculator", "mr+"))
+        self.btn_root.setText(_translate("Calculator", "√"))
+        self.btn_multiplication.setText(_translate("Calculator", "*"))
+        self.btn_mem_show.setText(_translate("Calculator", "mr"))
+        self.btn_7.setText(_translate("Calculator", "7"))
+        self.btn_0.setText(_translate("Calculator", "0"))
+        self.btn_AC.setText(_translate("Calculator", "AC"))
+        self.btn_result.setText(_translate("Calculator", "="))
+        self.display_RUB.setText(_translate("Calculator", "0"))
+        self.btn_currency_result.setText(_translate("Calculator", "convert"))
+        self.display_currency.setText(_translate("Calculator", "0"))
+        self.display_currency_name.setText(_translate("Calculator", "sellect curency"))
+        self.display_RUB_name.setText(_translate("Calculator", "RUB"))
+        self._036.setText(_translate("Calculator", " Австралийский доллар"))
+        self._944.setText(_translate("Calculator", " Азербайджанский манат"))
+        self._826.setText(_translate("Calculator", " Английский фунт"))
+        self._051.setText(_translate("Calculator", " Армянских драм"))
+        self._933.setText(_translate("Calculator", " Белорусский рубль"))
+        self._975.setText(_translate("Calculator", " Болгарский лев"))
+        self._986.setText(_translate("Calculator", " Бразильский реал"))
+        self._348.setText(_translate("Calculator", " Венгерских форинт"))
+        self._344.setText(_translate("Calculator", " Гонконгский доллар"))
+        self._208.setText(_translate("Calculator", " Датская крона"))
+        self._840.setText(_translate("Calculator", " Доллар США"))
+        self._978.setText(_translate("Calculator", " Евро"))
+        self._356.setText(_translate("Calculator", " Индийская рупия"))
+        self._398.setText(_translate("Calculator", " Казахстанский тенге"))
+        self._124.setText(_translate("Calculator", " Канадский доллар"))
+        self._417.setText(_translate("Calculator", " Киргизский сом"))
+        self._156.setText(_translate("Calculator", " Китайский юань"))
+        self._498.setText(_translate("Calculator", " Молдавский лей"))
+        self._578.setText(_translate("Calculator", " Норвежская крона"))
+        self._985.setText(_translate("Calculator", " Польский злотый"))
+        self._946.setText(_translate("Calculator", " Румынский лей"))
+        self._702.setText(_translate("Calculator", " Сингапурский доллар"))
+        self._972.setText(_translate("Calculator", " Таджикский сомони"))
+        self._949.setText(_translate("Calculator", " Турецкая лира"))
+        self._934.setText(_translate("Calculator", " Туркменский манат"))
+        self._860.setText(_translate("Calculator", " Узбекский сум"))
+        self._980.setText(_translate("Calculator", " Украинская гривна"))
+        self._203.setText(_translate("Calculator", " Чешская крона"))
+        self._752.setText(_translate("Calculator", " Шведская крона"))
+        self._756.setText(_translate("Calculator", " Швейцарский франк"))
+        self._710.setText(_translate("Calculator", " Южноафриканский рэнд"))
+        self._410.setText(_translate("Calculator", " Вон Республики Коре"))
+        self._392.setText(_translate("Calculator", " Японская иена"))
