@@ -1,5 +1,5 @@
-import sys, time
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from mainwindow import Ui_Calculator
 import functions as f
 
@@ -8,14 +8,15 @@ class Calculator(QMainWindow, Ui_Calculator):
 
 	def __init__(self):
 		super().__init__()
+		self.setupUi(self)
+
 		self.x = 0
 		self.y = 0
-		self.setupUi(self)
 		self.sign = None
 		self.mem = 0
 		self.flag = False
 
-		self.rates = {}
+		self.rates = dict()
 		self.selected_currency = []
 
 		self.f = {
@@ -30,7 +31,6 @@ class Calculator(QMainWindow, Ui_Calculator):
 
 		# CALCULATOR PAGE
 		self.btn_to_calculator.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.calculator_page))
-
 
 		# BUTTONS WITH DIGIT
 		self.btn_0.clicked.connect(self.button_with_digit)
@@ -210,6 +210,8 @@ class Calculator(QMainWindow, Ui_Calculator):
 		self.rates = f.rate_from_cbrf()
 		self.selected_currency = self.rates['840']
 		self.display_currency_name.setText(self.rates['840'][1])
+		self.display_currency.setText(str(self.rates['840'][0]))
+		self.display_RUB.setText(str(self.rates['840'][2]))
 
 	def select_currency(self):
 		sender = self.sender()
@@ -229,10 +231,11 @@ class Calculator(QMainWindow, Ui_Calculator):
 		try:
 			self.display_RUB.setText(str(f'{f.multiplication(x, y):.2f}'))
 		except ValueError:
-			self.display_RUB.setText('Error')
+			self.display_RUB.setText('')
 
 
-app = QApplication(sys.argv)
-ex = Calculator()
-ex.show()
-sys.exit(app.exec_())
+if __name__ == "__main__":
+	app = QApplication(sys.argv)
+	ex = Calculator()
+	ex.show()
+	sys.exit(app.exec_())
